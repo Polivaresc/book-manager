@@ -1,3 +1,5 @@
+import { writeFileSync } from 'fs';
+
 export class BookManager {
     constructor(private books: Book[]) {}
 
@@ -64,5 +66,10 @@ export class BookManager {
             book.pages = updatedBook.pages;
         }
         return true;
-    } 
+    }
+
+    saveBooksToFile(path: string): void {
+        const data = JSON.stringify(this.books, null, 2);
+        writeFileSync(path, data, 'utf-8');
+    }
 }
