@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Frankenstein",
+    "author": "M. Shelley",
+    "pages": 304
+  },
+  {
+    "title": "The 3 body problem",
+    "author": "Cixin Liu",
+    "pages": 500
+  },
+  {
+    "title": "The dark forest",
+    "author": "Cixin Liu",
+    "pages": 528
+  },
+  {
+    "title": "Death's end",
+    "author": "Cixin Liu",
+    "pages": 608
+  },
+  {
+    "title": "The Masque of the Red Death",
+    "author": "Edgar Allan Poe",
+    "pages": 200
+  },
+  {
+    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+    "author": "Robert Louis Stevenson",
+    "pages": 110
+  }
+]

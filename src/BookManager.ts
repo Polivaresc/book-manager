@@ -4,7 +4,10 @@ export class BookManager {
     constructor(private books: Book[]) {}
 
     addBook(book: Book) {
-        this.books.push(book);
+        const exists: boolean = this.books.some((b) => b.title === book.title && b.author === book.author);
+        if (!exists) {
+            this.books.push(book);
+        }
     }
 
     listBooks(): Book[] {
