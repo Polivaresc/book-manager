@@ -1,4 +1,4 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync, readFileSync} from 'fs';
 
 export class BookManager {
     constructor(private books: Book[]) {}
@@ -71,5 +71,15 @@ export class BookManager {
     saveBooksToFile(path: string): void {
         const data = JSON.stringify(this.books, null, 2);
         writeFileSync(path, data, 'utf-8');
+    }
+
+    loadBooksFromFile(path: string): void {
+        const data = readFileSync(path, 'utf-8');
+        const books: Book[] = JSON.parse(data);
+        for (const newBook of books) {
+            if (!this.books.some((book) => book.title === newBook.title)) {
+                this.books.push(newBook);
+            }
+        }
     }
 }

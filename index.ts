@@ -27,8 +27,8 @@ bookManagerExample.addBook({
 })
 
 console.log('List Of Books: ', bookManagerExample.listBooks());
-
 console.log('Total Pages: ', bookManagerExample.totalPages());
+console.log('Removing book: ', bookManagerExample.removeBook("The Lord of the Rings"));
 
 bookManagerExample.sortBooksByTitle()
 bookManagerExample.saveBooksToFile('booksSortedByTitle.json');
@@ -42,7 +42,7 @@ bookManagerExample.saveBooksToFile('booksSortedByPagesAsc.json');
 bookManagerExample.updateBook("Frankenstein", { author: "M. Shelley" });
 bookManagerExample.updateBook("The three body problem", { title: "The 3 body problem", pages: 500 });
 
-console.log('Removing book: ', bookManagerExample.removeBook("The Lord of the Rings"));
+bookManagerExample.loadBooksFromFile('./data/booksToLoad.json');
 
 bookManagerExample.saveBooksToFile('booksUpdated.json');
 
